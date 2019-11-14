@@ -7,6 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
+<form method="POST" action="login.do" modelAttribute="login">
+	
+</form>
 <h1>Welcome, ${username }</h1>
 </body>
 </html>
