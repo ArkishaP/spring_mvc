@@ -1,0 +1,6 @@
+com\spring_mvc\controller\MyController.class
+com\spring_mvc\service\MyServiceIntf.class
+com\spring_mvc\dao\MyDaoImpl.class
+com\spring_mvc\service\MyServiceImpl.class
+com\spring_mvc\model\Contact.class
+com\spring_mvc\dao\MyDaoIntf.class
