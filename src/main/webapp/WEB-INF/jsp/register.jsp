@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="register.do" method="POST">
+<form action="registerProcess.do" method="POST">
 	Username: <input type="text" name="username"><br>
 	Password: <input type="text" name="password"><br>
 	First Name: <input type="text" name="first_name"><br>

@@ -36,7 +36,12 @@ public class MyController {
 		return mav;
 	}
 	
-	@RequestMapping(value="/register", method=RequestMethod.POST)
+	@RequestMapping(value="/register",method=RequestMethod.GET)
+	public ModelAndView goToRegister(HttpServletRequest request, HttpServletResponse response){
+		ModelAndView mav = new ModelAndView("register");
+		return mav;
+	}
+	@RequestMapping(value="/registerProcess", method=RequestMethod.POST)
 	public ModelAndView insertUser(HttpServletRequest request, HttpServletResponse response){
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
@@ -56,15 +61,20 @@ public class MyController {
 		boolean flag = myService.insertUser(user);
 		ModelAndView mav = new ModelAndView();
 		if(flag){
-			mav.addObject("username",username);
 			mav.setViewName("login");
 		}
 		else
 		{
 			mav.addObject("error","Sorry, Try Again!");
 			mav.setViewName("contactreport");
-//			mav.setViewName("register");
+			mav.setViewName("register");
 		}
+		
+		return mav;
+	}
+	
+	public ModelAndView loginUser(HttpServletRequest request, HttpServletResponse response){
+		ModelAndView mav = null;
 		
 		return mav;
 	}
